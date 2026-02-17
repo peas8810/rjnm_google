@@ -105,7 +105,7 @@
   });
 
   const top3 = [...rows].sort((a,b)=> b.count - a.count).slice(0,3);
-  const medals = ["🥇","🥈","🥉"];
+  const medals = ["1°","2°","3°"];
   const rankEl = $("rank");
   rankEl.innerHTML = "";
   top3.forEach((r, i) => {
