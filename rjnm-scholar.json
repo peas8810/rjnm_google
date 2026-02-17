@@ -1,0 +1,19 @@
+{
+  "source": "COLE_AQUI_O_LINK_DO_SCHOLAR_DA_RJNM",
+  "profile_name": "RJNM (Google Scholar)",
+  "updated_at": "2026-02-17",
+  "metrics": {
+    "citations_all": 69,
+    "citations_5y": 69,
+    "h_index_all": 4,
+    "h_index_5y": 4,
+    "i10_index_all": 0,
+    "i10_index_5y": 0
+  },
+  "citations_by_year": [
+    { "year": "2022", "value": 5 },
+    { "year": "2023", "value": 10 },
+    { "year": "2024", "value": 18 },
+    { "year": "2025", "value": 42 }
+  ]
+}
