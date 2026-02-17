@@ -1,0 +1,77 @@
+name: Update RJNM Scholar JSON (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      profile_name:
+        description: "Nome do perfil"
+        required: true
+        default: "RJNM (Google Scholar)"
+      source:
+        description: "Link do Google Scholar"
+        required: true
+        default: "COLE_AQUI_O_LINK_DO_SCHOLAR_DA_RJNM"
+      citations_all:
+        description: "Citações (Todos)"
+        required: true
+        default: "69"
+      citations_5y:
+        description: "Citações (Desde 2021)"
+        required: true
+        default: "69"
+      h_index_all:
+        description: "h-index (Todos)"
+        required: true
+        default: "4"
+      h_index_5y:
+        description: "h-index (Desde 2021)"
+        required: true
+        default: "4"
+      i10_index_all:
+        description: "i10-index (Todos)"
+        required: true
+        default: "0"
+      i10_index_5y:
+        description: "i10-index (Desde 2021)"
+        required: true
+        default: "0"
+      citations_by_year:
+        description: "Citações por ano (um por linha: 2022=5)"
+        required: true
+        default: |
+          2022=5
+          2023=10
+          2024=18
+          2025=42
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run updater
+        env:
+          PROFILE_NAME: ${{ inputs.profile_name }}
+          SOURCE: ${{ inputs.source }}
+          CITATIONS_ALL: ${{ inputs.citations_all }}
+          CITATIONS_5Y: ${{ inputs.citations_5y }}
+          H_INDEX_ALL: ${{ inputs.h_index_all }}
+          H_INDEX_5Y: ${{ inputs.h_index_5y }}
+          I10_INDEX_ALL: ${{ inputs.i10_index_all }}
+          I10_INDEX_5Y: ${{ inputs.i10_index_5y }}
+          CITATIONS_BY_YEAR: ${{ inputs.citations_by_year }}
+        run: |
+          python scripts/update_rjnm_scholar_manual.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add rjnm-scholar.json
+          git diff --cached --quiet || git commit -m "manual: update RJNM Scholar metrics"
+          git push
