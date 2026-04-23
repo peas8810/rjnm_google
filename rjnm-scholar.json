@@ -3,12 +3,12 @@
   "profile_name": "RJNM (Google Scholar)",
   "updated_at": "2026-02-17",
   "metrics": {
-    "citations_all": 69,
-    "citations_5y": 69,
-    "h_index_all": 4,
-    "h_index_5y": 4,
-    "i10_index_all": 0,
-    "i10_index_5y": 0
+    "citations_all": 578,
+    "citations_5y": 578,
+    "h_index_all": 15,
+    "h_index_5y": 15,
+    "i10_index_all": 15,
+    "i10_index_5y": 15
   },
   "citations_by_year": [
     { "year": "2022", "value": 5 },
