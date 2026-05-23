@@ -3,17 +3,18 @@
   "profile_name": "RJNM (Google Scholar)",
   "updated_at": "2026-04-23",
   "metrics": {
-    "citations_all": 578,
-    "citations_5y": 578,
-    "h_index_all": 15,
-    "h_index_5y": 15,
-    "i10_index_all": 15,
-    "i10_index_5y": 15
+    "citations_all": 1041,
+    "citations_5y": 1041,
+    "h_index_all": 20,
+    "h_index_5y": 20,
+    "i10_index_all": 22,
+    "i10_index_5y": 22
   },
   "citations_by_year": [
     { "year": "2022", "value": 5 },
     { "year": "2023", "value": 10 },
     { "year": "2024", "value": 18 },
-    { "year": "2025", "value": 42 }
+    { "year": "2025", "value": 54 },
+    { "year": "2025", "value": 952 }
   ]
 }
