@@ -1,20 +1,20 @@
 {
   "source": "COLE_AQUI_O_LINK_DO_SCHOLAR_DA_RJNM",
   "profile_name": "RJNM (Google Scholar)",
-  "updated_at": "2026-04-23",
+  "updated_at": "2026-06-30",
   "metrics": {
-    "citations_all": 1041,
-    "citations_5y": 1041,
-    "h_index_all": 20,
-    "h_index_5y": 20,
-    "i10_index_all": 22,
-    "i10_index_5y": 22
+    "citations_all": 1257,
+    "citations_5y": 1256,
+    "h_index_all": 21,
+    "h_index_5y": 21,
+    "i10_index_all": 23,
+    "i10_index_5y": 23
   },
   "citations_by_year": [
     { "year": "2022", "value": 5 },
     { "year": "2023", "value": 10 },
     { "year": "2024", "value": 18 },
     { "year": "2025", "value": 54 },
-    { "year": "2025", "value": 952 }
+    { "year": "2026", "value": 1165 }
   ]
 }
